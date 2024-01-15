@@ -56,6 +56,7 @@ window.addEventListener('click', ()=>{
             cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
 
             toggleCartStatus()
+            calcCartPrice()
         }
 
         card.querySelector('[data-counter]').innerText = '1'

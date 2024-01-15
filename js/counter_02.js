@@ -16,6 +16,8 @@ window.addEventListener('click', (event) => {
         if (parseInt(counter.innerText) > 1) {
             counter.innerText = --counter.innerText
 
+
+
             // is goods in basket
         } else if (event.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1) {
             console.log('in basket')
@@ -23,6 +25,10 @@ window.addEventListener('click', (event) => {
 
             toggleCartStatus()
         }
+    }
+
+    if (event.target.hasAttributes('data-action')){
+
     }
 
 })
