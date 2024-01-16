@@ -23,12 +23,14 @@ window.addEventListener('click', (event) => {
             console.log('in basket')
             event.target.closest('.cart-item').remove()
 
+            calcCartPriceAndDelivery()
+
             toggleCartStatus()
         }
     }
 
-    if (event.target.hasAttributes('data-action')){
-
+    if (event.target.hasAttributes('data-action') && event.target.closest('.cart-wrapper')){
+        calcCartPriceAndDelivery()
     }
 
 })
