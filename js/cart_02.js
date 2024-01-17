@@ -20,6 +20,7 @@ window.addEventListener('click', ()=>{
         if (itemInCart){
             const counterElement = itemInCart.querySelector('[data-counter]')
             counterElement.innerText = parseInt(counterElement.innerText) + parseInt(productInfo.counter)
+            calcCartPriceAndDelivery()
         }else {
 
             const cartItemHTML = `<!-- Cart item -->
